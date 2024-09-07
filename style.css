@@ -3,10 +3,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: none;
 }
 body{
     background-color: #ecf4fc;
+    overflow-x: hidden;
 }
 
 /*Style Tela Login*/
@@ -25,13 +25,13 @@ body{
 }
 img{
     width: 70%;
-    max-width: 100%;
+    max-width: 70%;
 }
 form{
     display: flex;
     flex-direction: column;
     width: 65%;
-    height: 60%;
+    height: 65%;
     align-items: center;
     background-color: #34148c;
     border-radius: 10px;
@@ -70,6 +70,7 @@ footer{
 
 /*Style Tela Dashboard*/
 .navbar{
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,14 +79,16 @@ footer{
     background-color: #34148c;
 }
 .icon-nav{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin-right: 5px;
 }
 .a-nav{
+
+    white-space: nowrap;
     color: #ecf4fc;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     padding-right: 130px;
 }
 .main{
@@ -113,7 +116,7 @@ footer{
 .grafico{
     display: flex;
     width: 60%;
-    height: 500px;
+    height: 90%;
     justify-content: center;
     padding-top: 70px;
 }
@@ -122,7 +125,7 @@ footer{
 }
 .main-left>fieldset>legend{
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 15px;
 }
 .field{
     margin: 40px 0;
@@ -132,26 +135,26 @@ footer{
 }
 .saldo{
     color: blue;
-    font-size: 25px;
+    font-size: 20px;
 }
 .entrada{
     color: green;
-    font-size: 25px;
+    font-size: 20px;
 }
 .saida{
     color: red;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
 
 /*Style Tela Nova Entrada*/
 
-.main-entrada, .main-despesa{
+.main-entrada, .main-despesa, .main-nova-conta{
     background: #109010;
     display: flex;
-    width: 40vw;
-    height: 70vh;
+    width: 35vw;
+    height: 75vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -159,21 +162,22 @@ footer{
     margin: auto;
     border-radius: 10px;
 }
+
 h1{
     color: black;
-    padding: 25px 0;
-    font-size: 40px;
+    padding-bottom: 25px;
+    font-size: 35px;
 }
 label{
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     align-self: start;
 }
 .input{
     background: white;
     width: 300px;
-    padding: 20px;
-    margin-bottom: 35px;
+    padding: 13px;
+    margin-bottom: 25px;
     border-radius: 10px;
     font-size: 20px;
 }
@@ -190,7 +194,7 @@ button{
     padding: 9px;
     background: #34148c;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
 }
 .a-entrada{
@@ -231,18 +235,19 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
 }
 .field-left>legend{
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 10px;
 }
 .conta-brasil, .conta-bradesco{
     flex-direction: column;
     text-align: center;
-    width: 40%;
+    width: 50%;
     margin: 50px;
 }
 .h3{
     margin: 0;
     color:#109010;
+    font-size: 30px;
 }
 .conta-saldo-total{
     display: flex;
@@ -260,7 +265,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background: white;
 }
 .S{
-    font-size: 25px;
+    font-size: 18px;
 }
 .span-saldo-total{
     font-size: 30px;
@@ -276,42 +281,23 @@ input[type="number"]::-webkit-outer-spin-button {
 .a-conta{
     color: #ecf4fc;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /*Style Tela Nova Conta*/
 
-.main-nova-conta{
-    background: #109010;
-    display: flex;
-    width: 40vw;
-    height: 70vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    border-radius: 10px;
-}
 
 .div-conta{
     display: flex;
     flex-direction: column;
 }
-.input-conta{
-    background: white;
-    width: 300px;
-    padding: 20px;
-    margin-bottom: 35px;
-    border-radius: 10px;
-    font-size: 20px;
-}
+
 .div-conta > select{
-    font-size: 25px;
+    font-size: 18px;
     background: white;
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 45px;
+    padding: 13px;
+    margin-bottom: 35px;
     width: 300px;
 }
 
@@ -328,9 +314,10 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     text-align: center;
     margin: auto;
+    margin-bottom: 60px;
 }
 .field-rela>legend{
-    font-size: 25px;
+    font-size: 18px;
     margin-bottom: 25px;
 }
 
@@ -338,7 +325,7 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 12px;
     background-color: #34148c;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .linha:nth-child(even) {
@@ -351,7 +338,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .data, .descricao {
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     padding: 0 35px;
 }
 
