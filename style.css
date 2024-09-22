@@ -1,15 +1,42 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;1,500;1,700&display=swap');
+
+
 body{
     background-color: #ecf4fc;
     overflow-x: hidden;
 }
 
 /*Style Tela Login*/
+.nav-logo{
+    width: 100vw;
+    display: flex;
+    height: 60px;
+    position: fixed;
+}
+.nav-logo div{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    line-height: 0;
+    margin: 30px 90px;
+}
+.nav-logo div h1{
+    font-size: 50px;
+}
+.nav-logo div h1, span{
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #6414dc;
+}
 .main-login{
     width: 100vw;
     height: 100vh;
@@ -27,36 +54,57 @@ img{
     width: 70%;
     max-width: 70%;
 }
-form{
+.form-login{
     display: flex;
     flex-direction: column;
-    width: 65%;
-    height: 65%;
+    justify-content: center;
     align-items: center;
-    background-color: #34148c;
+    width: 400px;
     border-radius: 10px;
     padding: 25px;
 }
-h3{
-    margin: 40px;
-    font-size: 40px;
-    color: #77ffc0;
+.titulo-login{
+    display: flex;
+    
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
 }
-.input-form{
-    padding: 15px;
-    margin-bottom: 25px;
-    width: 400px;
-    border-radius: 10px;
-    background: white;
-    font-size: 25px;
-    box-shadow: 0px 10px 40px #00000056;
+.titulo-login a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 50px;
+    width: 170px;
+}
+.titulo-login a:hover{
+    border-bottom: 1px solid black;
+}
+
+.form-login input{
+    padding: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid gray;
+}
+.form-login input::placeholder{
+    font-size: 18px;
 }
 .a{
-    margin-top: 30px;
-    padding: 15px;
-    border-radius: 20px;
-    background: #77ffc0;
-    color: black;
+    width: 85%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #6414dc;
+    color: white;
+    font-weight: bold;
     font-size: 20px;
     text-decoration: none;
 }
@@ -69,27 +117,38 @@ footer{
 }
 
 /*Style Tela Dashboard*/
+.a-img-nav{
+    display: none;
+}
 .navbar{
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px 50px;
     margin-bottom: 40px;
     background-color: #34148c;
 }
+.navbar div{
+    display: flex;
+}
 .icon-nav{
     width: 15px;
     height: 15px;
-    margin-right: 5px;
+    margin: 0 5px;
+}
+.icon-nav2{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
 }
 .a-nav{
-
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     color: #ecf4fc;
     text-decoration: none;
     font-size: 15px;
-    padding-right: 130px;
 }
 .main{
     display: flex;
@@ -153,7 +212,7 @@ footer{
 .main-entrada, .main-despesa, .main-nova-conta{
     background: #109010;
     display: flex;
-    width: 35vw;
+    width: 500px;
     height: 75vh;
     flex-direction: column;
     justify-content: center;
@@ -162,7 +221,14 @@ footer{
     margin: auto;
     border-radius: 10px;
 }
-
+.form-nova{
+    background: gray;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 h1{
     color: black;
     padding-bottom: 25px;
@@ -175,16 +241,13 @@ label{
 }
 .input{
     background: white;
-    width: 300px;
+    width: 100%;
     padding: 13px;
     margin-bottom: 25px;
     border-radius: 10px;
     font-size: 20px;
 }
-.div-form{
-    display: flex;
-    flex-direction: column;
-}
+
 textarea{
     height: 100px;
     width: 250px;
@@ -219,7 +282,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .main-conta{
     display: flex;
     width: 100vw;
-    max-width: 100%;
 }
 .conta>fieldset{
     background: white;
@@ -259,6 +321,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 100px;
     border-radius: 10px;
     text-align: center;
+    white-space: nowrap;
 }
 .field-right{
     padding: 25px;
@@ -285,8 +348,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /*Style Tela Nova Conta*/
-
-
 .div-conta{
     display: flex;
     flex-direction: column;
@@ -342,8 +403,93 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 0 35px;
 }
 
+@media screen and (max-width:660px){
+    
+    .div-left{
+        display: none;
+    }
+    .div-right{
+        width: 100vw;
 
+    }
+    .form-login input::placeholder{
+        font-size: 15px;
+    }
+    .a{
+        width: 85%;
+        height: 40px;
+        font-size: 17px;
+    }
+    
+}
 
+@media screen and (max-width:1024px) {
+    .main-entrada, .main-despesa, .main-nova-conta{
+        width: 50%;
+    }
+    .form-nova{
+        width: 70%;
+    }
+}
+@media screen and (max-width:850px) {
+    .a-img-nav{
+        display: flex;
+    }
+    .a-nav, .icon-nav{
+        display: none;
+    }
+    .icon-nav2{
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+    .navbar{
+        padding: 15px 50px;
+    }
+}
+@media screen and (max-width:710px) {
+    .main-conta{
+        flex-direction: column;
+    }
+    .conta-saldo-total{
+        margin-top: 100px;
+        width: 30%;
+    }
+}
+@media screen and (max-width:600px) {
+    .main-entrada, .main-despesa, .main-nova-conta{
+        width: 70%;
+    }
+    .form-nova{
+        width: 80%;
+    }
+}
+@media screen and (max-width:426px) {
+    .main-entrada, .main-despesa, .main-nova-conta{
+        width: 90%;
+    }
+    .form-nova{
+        width: 90%;
+    }
+    .icon-nav2{
+        width: 25px;
+        height: 25px;
+        margin: 0 5px;
+    }
+    .navbar{
+        padding: 20px 10px;
+    }
+    .form-login{
+        width: 100%;
+    }
+
+    .conta{
+        width: 100vw;
+    }
+    .field-left{
+        width: 100%;
+    }
+}
 
 
 

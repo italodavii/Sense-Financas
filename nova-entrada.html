@@ -8,31 +8,58 @@
 </head>
 <body>
     <nav class="navbar">
-        <img class="icon-nav" src="icon/main-menu.png" alt=""><a class="a-nav" href="dashboard.html">Dashboard</a>
-        <img class="icon-nav" src="icon/upward-arrow.png" alt=""><a class="a-nav" href="nova-entrada.html">Nova Entrada</a>
-        <img class="icon-nav" src="icon/down-arrow.png" alt=""><a class="a-nav" href="nova-saida.html">Nova Despesa</a>
-        <img class="icon-nav" src="icon/bank.png" alt=""><a class="a-nav" href="conta.html">Contas</a>
-        <img class="icon-nav" src="icon/clipboard.png" alt=""><a class="a-nav" href="relatorio.html">Relatório</a>
-        <img class="icon-nav" src="icon/sair.png" alt=""><a class="a-nav" href="login.html">Encerrar sessão</a>
+        <div>
+            <img class="icon-nav" src="icon/main-menu.png" alt="">
+            <a class="a-nav" href="dashboard.html">Dashboard</a>
+            <a class="a-img-nav" href="dashboard.html"><img class="icon-nav2" src="icon/main-menu.png" alt=""></a>
+        </div>
+        <div>
+            <img class="icon-nav" src="icon/upward-arrow.png" alt="">
+            <a class="a-nav" href="nova-entrada.html">Nova Entrada</a>
+            <a class="a-img-nav" href="nova-entrada.html"><img class="icon-nav2" src="icon/upward-arrow.png" alt=""></a>
+        </div>
+        <div>
+            <img class="icon-nav" src="icon/down-arrow.png" alt="">
+            <a class="a-nav" href="nova-saida.html">Nova Despesa</a>
+            <a class="a-img-nav" href="nova-saida.html"><img class="icon-nav2" src="icon/down-arrow.png" alt=""></a>
+        </div>
+        <div>
+            <img class="icon-nav" src="icon/bank.png" alt="">
+            <a class="a-nav" href="conta.html">Contas</a>
+            <a class="a-img-nav" href="conta.html"><img class="icon-nav2" src="icon/bank.png" alt=""></a>
+        </div>
+        <div>
+            <img class="icon-nav" src="icon/clipboard.png" alt="">
+            <a class="a-nav" href="relatorio.html">Relatório</a>
+            <a class="a-img-nav" href="relatorio.html"><img class="icon-nav2" src="icon/clipboard.png" alt=""></a>
+        </div>
+        <div>
+            <img class="icon-nav" src="icon/sair.png" alt="">
+            <a class="a-nav" href="index.html">Encerrar sessão</a>
+            <a class="a-img-nav" href="index.html"><img class="icon-nav2" src="icon/sair.png" alt=""></a>
+        </div>  
     </nav>
     <div class="main-entrada">
         <h1>Nova entrada</h1>
         
-        <div class="div-form">
+        <form class="form-nova" action="">
+            
             <label for="number">Valor</label>
             <input class="input" type="number" placeholder="Valor (R$)" required>
-        </div>
-        <div class="div-form">
+           
+         
             <label for="date">Data</label>
             <input class="input" type="date" required>
-        </div>
-        <div class="div-form">
+            
+           
             <textarea class="input" rows="5" cols="28" placeholder="Descrição..."></textarea>
-        </div> 
-        <div class="button">
-            <a class="a-entrada" href="dashboard.html"><button>Voltar</button></a>
-            <a class="a-entrada" href="dashboard.html"><button type="submit">Salvar</button></a>
-        </div>
+         
+            <div class="button">
+                <a class="a-entrada" href="dashboard.html"><button>Voltar</button></a>
+                <a class="a-entrada" href="dashboard.html"><button type="submit">Salvar</button></a>
+            </div>
+        </form>
+        
     </div>
 </body>
 </html>
